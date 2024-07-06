@@ -1,0 +1,72 @@
+\documentclass[12pt]{beamer}
+
+\newcommand{\emp}{\noindent\fboxsep=0pt}
+\usefonttheme{serif}
+
+\usetheme{Darmstadt}
+\usepackage[utf8]{inputenc}
+\usepackage[UTF8,zihao=-4]{ctexcap}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{wrapfig}
+\usepackage{fontspec}
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amstext}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{pifont}
+\usepackage{float}
+\usepackage{newclude}
+\usepackage{subfig}
+\usepackage{paralist}
+\usepackage{booktabs} % 允许在表中使用\toprule、\ midrule和\ bottomrule% 定义正文字体
+\usepackage[bookmarks=true]{hyperref}
+\usepackage{tabularx}
+%\usepackage{listings}
+
+
+\setromanfont{Times New Roman}	% 将西文字体设置为 Times New Roman
+% \setCJKfamilyfont{zhkai}{[SIMKAI.TTF]}
+% \newcommand*{\kaiti}{\CJKfamily{zhkai}}
+
+% 定义 caption
+\DeclareCaptionFont{kaiticaption}{\kaishu \small}	% 定义下面三个caption的font的kaiticaption的具体格式
+\captionsetup[figure]{font=small,labelsep=quad,skip=0.5ex,labelfont=bf,font=kaiticaption}	% 设置图片的 caption 格式 % 想要标题换行后居中，可以添加justification=centering
+\captionsetup[table]{font=small,labelsep=quad,skip=0.5ex,labelfont=bf,font=kaiticaption}	% 设置表格的 caption 格式
+\captionsetup[subfloat]{font=small,labelsep=quad,skip=0.5ex,labelfont=bf,font=kaiticaption}
+\captionsetup[equation]{font=small,labelsep=quad,skip=0.5ex,labelfont=bf,font=kaiticaption}
+
+
+% 设置图片，表格，公式编号格式
+\renewcommand{\thetable}{\thesection{}-\arabic{table}}	% \thetable 表示设置的是表格的编号格式， 后面括号的内容为编号格式：章节号-表格的序号
+\renewcommand{\thefigure}{\thesection{}-\arabic{figure}}
+\renewcommand{\theequation}{\thesection{}-\arabic{equation}}
+
+
+% 设置代码块
+%\definecolor{commentcolor}{RGB}{85,139,78}
+%\definecolor{stringcolor}{RGB}{206,145,108}
+%\definecolor{keywordcolor}{RGB}{34,34,250}
+%\lstset{
+%	language=Matlab, % 默认代码语言.
+%	basicstyle=\footnotesize,
+%	numbers=left, %设置行号位置
+%	numberstyle=\tiny, %设置行号大小
+%	commentstyle=\color{commentcolor},	%注释颜色
+%	keywordstyle=\color{keywordcolor},	%关键词颜色
+%	stringstyle=\color{stringcolor},	%字符串颜色
+%	frame=single, %设置边框格式
+%	escapeinside=``, %逃逸字符(1左面的键)，用于显示中文
+%	breaklines = True, % 自动折行
+%	breakatwhitespace = True, % 自动折行时打断单词
+%	extendedchars=false, %解决代码跨页时，章节标题，页眉等汉字不显示的问题
+%	xleftmargin=2em,xrightmargin=2em, aboveskip=1em, %设置边距
+%	tabsize=4, %设置tab空格数
+%	showspaces=false %不显示空格
+%}

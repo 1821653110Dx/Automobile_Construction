@@ -1,0 +1,37 @@
+\input{share/introduction}
+\includeonly{include/}
+\graphicspath{{img/}}
+\setbeamertemplate{background}{\includegraphics[width=\paperwidth,height=\paperheight]{}}	% 插入背景图片，要带后缀
+% 下面两行用于删除导航栏
+\useoutertheme{split}
+\setbeamertemplate{headline}{}
+\begin{document}
+\author{author}
+\title{Title}
+\subtitle{subtitle}
+\logo{\includegraphics[]{}}	% insert logo
+\institute[UCAS]
+{
+	三明学院21车辆工程 \\ % 你所在的机构
+	\medskip
+	\textit{Your email address}
+}
+\date{\today}
+
+
+\begin{frame}[plain]	% title page
+	\titlepage
+\end{frame}
+
+\begin{frame} % catalog
+	\frametitle{Overview}
+	\tableofcontents
+\end{frame}
+
+\include*{}
+
+\begin{frame}	% tail page
+	\Huge{\centerline{Thank you all！}}
+	\centering{{\normalsize 我们是孩子，但我们精力充沛，勇往直前！}}
+\end{frame}
+\end{document}
